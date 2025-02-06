@@ -17,19 +17,29 @@ function showImage(image) {
     var newImage = document.createElement('img');
     newImage.src = image.src;
     newImage.removeAttribute('onclick');
+
     var modal = document.getElementById('preview');
-    modal.classList.toggle('showModal');
-    var existinImage = modal.querySelector('img');
-    if (existinImage) {
-        modal.removeChild(existinImage);
+    modal.classList.add('showModal');
+
+    var existingImage = modal.querySelector('img');
+    if (existingImage) {
+        modal.removeChild(existingImage);
     }
+    
     modal.appendChild(newImage);
 }
 
-modal.appendChild(newImage);
 
-function cerrarModal() { /* 19/01 */
+document.addEventListener("click", function(event) {
     var modal = document.getElementById('preview');
-    modal.classList.remove('showModal')
+    if (modal.classList.contains('showModal') && event.target === modal) {
+        cerrarModal();
+    }
+});
+
+function cerrarModal() {
+    var modal = document.getElementById('preview');
+    modal.classList.remove('showModal');
 }
+
 

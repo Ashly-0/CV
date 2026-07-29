@@ -6,10 +6,14 @@
 }
 
 :root {
-    --colortexto: #44566c;
-    --colortexto2: white;
-    --backgroundcolor: #44566c;
-    --miClor: pink;
+   --primary:#1E293B;
+    --secondary:#F8FAFC;
+    --accent:#EC4899;
+    --accent-light:#FCE7F3;
+    --text:#334155;
+    --text-light:#64748B;
+    --border:#E2E8F0;
+    --white:#FFFFFF;
 }
 
 

@@ -314,7 +314,7 @@ h2.title {
 }
 
 .porfolio {
-    column-count: 3;
+    column-count: 4;
     column-gap: 10px;
     row-gap: 12px;
 }
